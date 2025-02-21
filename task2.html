@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+
+</head>
+<style>
+  /* General body and layout styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the stopwatch */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px;
+    max-width: 100%;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Stopwatch display styles */
+.stopwatch {
+    margin-bottom: 20px;
+}
+
+#timeDisplay {
+    font-size: 3.5em;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+/* Buttons container */
+.buttons {
+    margin-top: 20px;
+}
+
+/* Styling for each button */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #4CAF50;
+    color: white;
+    width: 120px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Disabled button styling */
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Lap times section styling */
+#lapTimes {
+    margin-top: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Heading for lap times */
+#lapTimes h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Lap list styles */
+#lapList {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Each lap item styling */
+#lapList li {
+    font-size: 1.2em;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lapList li span {
+    font-weight: bold;
+    color: #333;
+}
+
+</style>
+<body>
+  <div class="container">
+    <h1>Stopwatch</h1>
+    <div class="stopwatch">
+      <div id="timeDisplay">00:00:00</div>
+      <div class="buttons">
+        <button id="startPauseButton">Start</button>
+        <button id="resetButton" disabled>Reset</button>
+        <button id="lapButton" disabled>Lap</button>
+      </div>
+    </div>
+    <div id="lapTimes">
+      <h2>Lap Times</h2>
+      <ul id="lapList"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
